@@ -26,7 +26,7 @@ a { color: inherit; }
   background-image: url("images/grain.png"), radial-gradient(ellipse at 50% 0%, #9a4be0 0%, #5b1fa6 35%, #2a0b58 75%, #1c0640 100%);
   background-size: 400px 400px, 100% 100%; background-repeat: repeat, no-repeat; }
 .hero video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
-.hero::after { content: ""; position: absolute; inset: 0; background: rgba(35, 8, 80, .3); pointer-events: none; }
+.hero::after { content: ""; position: absolute; inset: 0; background: rgba(0, 0, 0, .4); pointer-events: none; }
 .hero .logo { position: absolute; z-index: 2; top: clamp(2rem, 9vh, 5rem); left: 50%; transform: translateX(-50%); width: clamp(150px, 22vw, 260px); height: auto; filter: invert(1); }
 .hero h1 { position: relative; z-index: 2; margin: 0; padding: 0 1rem; width: 100%; }
 .hero .title { display: block; font-family: var(--title); font-weight: 400; text-transform: uppercase; font-size: clamp(3.4rem, 17.5vw, 15rem); line-height: 1; letter-spacing: .01em;
