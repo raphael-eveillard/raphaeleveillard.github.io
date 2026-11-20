@@ -14,7 +14,8 @@
 }
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; background: #1c0640; }
-body { margin: 0; color: var(--ink); font-family: var(--body); font-size: 1.0625rem; line-height: 1.65; background-color: var(--bg); background-image: var(--violet-bg); background-size: 400px 400px, 100% 100%; background-repeat: repeat, no-repeat; }
+body { margin: 0; color: var(--ink); font-family: var(--body); font-size: 1.0625rem; line-height: 1.65; background: #5b1fa6 linear-gradient(180deg, #000000 0%, #2a0b58 55%, #5b1fa6 100%) no-repeat; }
+body:has(.hero) { background: #5b1fa6 linear-gradient(180deg, #000000 100vh, #2a0b58 70%, #5b1fa6 100%) no-repeat; }
 a { color: inherit; }
 :focus-visible { outline: 3px solid #fff; outline-offset: 3px; }
 .wrap { max-width: 1000px; margin: 0 auto; padding: 0 1.5rem; }
