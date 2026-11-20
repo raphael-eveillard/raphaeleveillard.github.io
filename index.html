@@ -14,8 +14,20 @@
 <body>
 
 <header class="hero">
-  <!-- ✏️ Ta vidéo de fond : dépose-la dans le dossier video/ sous le nom fond.mp4
-       (conseil : 1080p, sans le son, moins de 10 Mo, 10 à 20 secondes en boucle) -->
+<details class="menu">
+  <summary><span>Menu</span><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></summary>
+  <nav class="menu-list" aria-label="Menu du site">
+    <a href="index.html">Accueil</a>
+    <a href="audiovisuel.html">Audiovisuel</a>
+    <a class="sub" href="courts-metrages.html">Mes courts-métrages</a>
+    <a class="sub" href="projets-pros.html">Projets professionnels</a>
+    <a href="creation-visuelle.html">Création visuelle</a>
+    <a class="sub" href="design-graphique.html">Design graphique</a>
+    <a class="sub" href="photographie.html">Photographie</a>
+    <a href="index.html#contact">Contact</a>
+    <a href="mentions-legales.html">Mentions légales</a>
+  </nav>
+</details>
   <video autoplay muted loop playsinline preload="metadata" aria-hidden="true">
     <source src="video/fond.mp4" type="video/mp4">
   </video>
