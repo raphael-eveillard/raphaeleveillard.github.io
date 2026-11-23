@@ -11,19 +11,11 @@
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Cormorant+Garamond:wght@500&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
-<script>
-document.addEventListener('click', function (e) {
-  document.querySelectorAll('details.menu[open]').forEach(function (d) { if (!d.contains(e.target)) d.removeAttribute('open'); });
-});
-document.addEventListener('keydown', function (e) {
-  if (e.key === 'Escape') document.querySelectorAll('details.menu[open]').forEach(function (d) { d.removeAttribute('open'); });
-});
-</script>
-<body>
+<body class="home">
 
 <header class="hero">
-<details class="menu">
-  <summary><span>Menu</span><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></summary>
+  <details class="menu">
+  <summary aria-label="Menu"><span>Menu</span><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></summary>
   <nav class="menu-list" aria-label="Menu du site">
     <a href="index.html">Accueil</a>
     <a href="audiovisuel.html">Audiovisuel</a>
@@ -36,16 +28,20 @@ document.addEventListener('keydown', function (e) {
     <a href="mentions-legales.html">Mentions légales</a>
   </nav>
 </details>
+  <!-- ✏️ Ta vidéo de fond : dépose-la dans le dossier video/ sous le nom fond.mp4
+       (conseil : 1080p, H.264, sans le son, moins de 10 Mo, 10 à 20 secondes en boucle) -->
   <video autoplay muted loop playsinline preload="metadata" aria-hidden="true">
     <source src="video/fond.mp4" type="video/mp4">
   </video>
-  <h1><span class="title"></span><span class="name">Raphaël Eveillard</span></h1>
-  <img class="logo" src="images/logo.png" alt="Monogramme RE de Raphaël Eveillard" width="600" height="254">
+  <!-- ✏️ Pour retirer le mot PORTFOLIO, supprime-le entre les deux balises <span class="title"> -->
+  <h1><span class="title">Portfolio</span><span class="name">Raphaël Eveillard</span></h1>
+  <img class="logo" src="images/logo.png" alt="Monogramme RE de Raphaël Eveillard" width="800" height="339">
   <a class="cue" href="#categories" aria-label="Descendre pour voir mes projets">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
   </a>
 </header>
 
+<div class="below">
 <main class="wrap">
   <section id="categories">
     <h2>Mon travail</h2>
@@ -85,5 +81,14 @@ document.addEventListener('keydown', function (e) {
     <a href="mentions-legales.html">Mentions légales et confidentialité</a>
   </div>
 </footer>
+</div>
+<script>
+document.addEventListener('click', function (e) {
+  document.querySelectorAll('details.menu[open]').forEach(function (d) { if (!d.contains(e.target)) d.removeAttribute('open'); });
+});
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape') document.querySelectorAll('details.menu[open]').forEach(function (d) { d.removeAttribute('open'); });
+});
+</script>
 </body>
 </html>

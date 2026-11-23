@@ -16,7 +16,20 @@
   <header class="bar">
     <a class="back" href="index.html">← Accueil</a>
     <a class="mark" href="index.html" aria-label="Retour à l’accueil"><img src="images/logo.png" alt="Monogramme RE de Raphaël Eveillard" width="800" height="339"></a>
-    <span></span>
+    <details class="menu">
+  <summary aria-label="Menu"><span>Menu</span><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></summary>
+  <nav class="menu-list" aria-label="Menu du site">
+    <a href="index.html">Accueil</a>
+    <a href="audiovisuel.html">Audiovisuel</a>
+    <a class="sub" href="courts-metrages.html">Mes courts-métrages</a>
+    <a class="sub" href="projets-pros.html">Projets professionnels</a>
+    <a href="creation-visuelle.html">Création visuelle</a>
+    <a class="sub" href="design-graphique.html">Design graphique</a>
+    <a class="sub" href="photographie.html">Photographie</a>
+    <a href="index.html#contact">Contact</a>
+    <a href="mentions-legales.html">Mentions légales</a>
+  </nav>
+</details>
   </header>
 </div>
 
@@ -44,5 +57,13 @@
     <a href="mentions-legales.html">Mentions légales et confidentialité</a>
   </div>
 </footer>
+<script>
+document.addEventListener('click', function (e) {
+  document.querySelectorAll('details.menu[open]').forEach(function (d) { if (!d.contains(e.target)) d.removeAttribute('open'); });
+});
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape') document.querySelectorAll('details.menu[open]').forEach(function (d) { d.removeAttribute('open'); });
+});
+</script>
 </body>
 </html>
