@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Design graphique – Raphaël Eveillard</title>
+<meta name="description" content="Identités visuelles, affiches et supports de communication.">
+<link rel="icon" type="image/png" href="images/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Cormorant+Garamond:wght@500&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+  <header class="bar">
+    <a class="back" href="creation-visuelle.html">← Création visuelle</a>
+    <a class="mark" href="index.html" aria-label="Retour à l’accueil"><img src="images/logo.png" alt="Monogramme RE de Raphaël Eveillard" width="800" height="339"></a>
+    <details class="menu">
+  <summary aria-label="Menu"><span>Menu</span><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></summary>
+  <nav class="menu-list" aria-label="Menu du site">
+    <a href="index.html">Accueil</a>
+    <a href="audiovisuel.html">Audiovisuel</a>
+    <a class="sub" href="courts-metrages.html">Mes courts-métrages</a>
+    <a class="sub" href="projets-pros.html">Projets professionnels</a>
+    <a href="creation-visuelle.html">Création visuelle</a>
+    <a class="sub" href="design-graphique.html">Design graphique</a>
+    <a class="sub" href="photographie.html">Photographie</a>
+    <a href="index.html#contact">Contact</a>
+    <a href="mentions-legales.html">Mentions légales</a>
+  </nav>
+</details>
+  </header>
+</div>
+
+<main class="wrap">
+  <header class="page-head">
+    <h1>Design graphique</h1>
+    <p>Identités visuelles, affiches et supports de communication.</p>
+  </header>
+  <section style="padding-top:0">
+    <article class="project">
+      <!-- ✏️ Pour une vidéo YouTube, remplace le contenu de .frame par :
+           <iframe src="https://www.youtube.com/embed/ID_DE_LA_VIDEO" title="Nom du projet 1" allowfullscreen></iframe>
+           Pour une image : <img src="images/mon-image.jpg" alt="Description de l’image"> -->
+      <div class="frame"><span>Vidéo ou image à ajouter</span></div>
+      <h2>Nom du projet 1</h2>
+      <p class="meta">2026 · Identité visuelle</p>
+      <p>Décris le projet en deux ou trois phrases : le contexte, ton rôle, ce que tu en retiens.</p>
+    </article>
+    <article class="project">
+      <!-- ✏️ Pour une vidéo YouTube, remplace le contenu de .frame par :
+           <iframe src="https://www.youtube.com/embed/ID_DE_LA_VIDEO" title="Nom du projet 2" allowfullscreen></iframe>
+           Pour une image : <img src="images/mon-image.jpg" alt="Description de l’image"> -->
+      <div class="frame"><span>Vidéo ou image à ajouter</span></div>
+      <h2>Nom du projet 2</h2>
+      <p class="meta">2025 · Affiche</p>
+      <p>Décris le projet en deux ou trois phrases : le contexte, ton rôle, ce que tu en retiens.</p>
+    </article>
+  </section>
+</main>
+<footer>
+  <div class="wrap">
+    <span>© 2026 Raphaël Eveillard</span>
+    <a href="mentions-legales.html">Mentions légales et confidentialité</a>
+  </div>
+</footer>
+<script>
+document.addEventListener('click', function (e) {
+  document.querySelectorAll('details.menu[open]').forEach(function (d) { if (!d.contains(e.target)) d.removeAttribute('open'); });
+});
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape') document.querySelectorAll('details.menu[open]').forEach(function (d) { d.removeAttribute('open'); });
+});
+</script>
+</body>
+</html>
